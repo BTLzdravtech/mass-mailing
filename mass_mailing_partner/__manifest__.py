@@ -6,13 +6,14 @@
 
 {
     "name": "Link partners with mass-mailing",
-    "version": "19.0.1.1.0",
+    "version": "19.0.1.1.1",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/mass-mailing",
     "license": "AGPL-3",
     "category": "Marketing",
     "depends": ["mass_mailing"],
-    "post_init_hook": "post_init_hook",
+    # TODO: remove when we have db with mass_mailing_partner installed
+    # "post_init_hook": "post_init_hook",
     "data": [
         "security/ir.model.access.csv",
         "views/mailing_trace_view.xml",
