@@ -6,7 +6,7 @@
     "summary": "Allow to remove blacklisted emails from mailing lists.",
     "version": "16.0.1.0.0",
     "category": "Marketing",
-    "website": "https://github.com/OCA/social",
+    "website": "https://github.com/OCA/mass-mailing",
     "author": "PyTech, Odoo Community Association (OCA)",
     "maintainers": [
         "SirPyTech",
