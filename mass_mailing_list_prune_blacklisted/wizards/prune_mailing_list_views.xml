@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
     ~ Copyright 2026 Simone Rubino - PyTech
     ~ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
@@ -10,22 +10,10 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <span
-                        attrs="{
-                            'invisible': [
-                                ('blacklisted_contact_ids', '!=', []),
-                            ],
-                        }"
-                    >
+                    <span invisible="blacklisted_contact_ids">
                         The selected mailing lists have no blacklisted contacts.
                     </span>
-                    <group
-                        attrs="{
-                            'invisible': [
-                                ('blacklisted_contact_ids', '=', []),
-                            ],
-                        }"
-                    >
+                    <group invisible="not blacklisted_contact_ids">
                         <span colspan="2">
                             Do you want to remove the following contacts from the selected mailing lists?
                         </span>
@@ -40,11 +28,7 @@
                         name="remove_blacklisted_contacts"
                         type="object"
                         class="oe_highlight"
-                        attrs="{
-                            'invisible': [
-                                ('blacklisted_contact_ids', '=', []),
-                            ],
-                        }"
+                        invisible="not blacklisted_contact_ids"
                     />
                     <button string="Cancel" special="cancel" />
                 </footer>

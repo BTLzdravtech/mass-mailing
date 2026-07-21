@@ -4,9 +4,9 @@
 from odoo import api, fields, models
 
 
-class PruneMailingList(models.Model):
+class PruneMailingList(models.TransientModel):
     _name = "mass_mailing_list_prune_blacklisted.wizard"
-    _description = "Remove blacklisted contacts from mailng list"
+    _description = "Remove blacklisted contacts from mailing list"
 
     blacklisted_contact_ids = fields.Many2many(
         comodel_name="mailing.contact",
@@ -43,7 +43,7 @@ class PruneMailingList(models.Model):
     def remove_blacklisted_contacts(self):
         for mailing_list in self.list_ids:
             list_blacklisted_contacts = self.blacklisted_contact_ids.filtered(
-                lambda c: mailing_list in c.list_ids
+                lambda c, mailing_list=mailing_list: mailing_list in c.list_ids
             )
             if list_blacklisted_contacts:
                 mailing_list.contact_ids = [

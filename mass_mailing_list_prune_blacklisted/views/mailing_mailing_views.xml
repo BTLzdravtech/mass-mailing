@@ -10,19 +10,15 @@
         <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_form" />
         <field name="arch" type="xml">
             <xpath
-                expr="//div[hasclass('o_mass_mailing_contact_list_ids')]"
+                expr="//div[hasclass('o_mass_mailing_contact_list_ids')]/div"
                 position="inside"
             >
-                <field name="has_list_blacklisted_contacts" invisible="True" />
                 <button
                     string="Prune Lists..."
+                    class="btn btn-secondary ms-2 py-0"
                     name="show_prune_lists_wizard"
                     type="object"
-                    attrs="{
-                        'invisible': [
-                            ('has_list_blacklisted_contacts', '=', False),
-                        ],
-                    }"
+                    invisible="not has_list_blacklisted_contacts"
                 />
             </xpath>
         </field>
