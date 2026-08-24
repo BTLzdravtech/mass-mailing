@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,18 +16,18 @@ msgstr ""
 #. module: mass_mailing_list_prune_blacklisted
 #: model_terms:ir.ui.view,arch_db:mass_mailing_list_prune_blacklisted.prune_wizard_form_view
 msgid ""
-"<span attrs=\"{                             'invisible': [                                 ('blacklisted_contact_ids', '!=', []),                             ],                         }\">\n"
-"                        The selected mailing lists have no blacklisted contacts.\n"
-"                    </span>"
+"<span colspan=\"2\">\n"
+"                            Do you want to remove the following contacts from the selected mailing lists?\n"
+"                        </span>\n"
+"                        <br/>"
 msgstr ""
 
 #. module: mass_mailing_list_prune_blacklisted
 #: model_terms:ir.ui.view,arch_db:mass_mailing_list_prune_blacklisted.prune_wizard_form_view
 msgid ""
-"<span colspan=\"2\">\n"
-"                            Do you want to remove the following contacts from the selected mailing lists?\n"
-"                        </span>\n"
-"                        <br/>"
+"<span invisible=\"blacklisted_contact_ids\">\n"
+"                        The selected mailing lists have no blacklisted contacts.\n"
+"                    </span>"
 msgstr ""
 
 #. module: mass_mailing_list_prune_blacklisted
@@ -71,11 +71,6 @@ msgid "ID"
 msgstr ""
 
 #. module: mass_mailing_list_prune_blacklisted
-#: model:ir.model.fields,field_description:mass_mailing_list_prune_blacklisted.field_mass_mailing_list_prune_blacklisted_wizard____last_update
-msgid "Last Modified on"
-msgstr ""
-
-#. module: mass_mailing_list_prune_blacklisted
 #: model:ir.model.fields,field_description:mass_mailing_list_prune_blacklisted.field_mass_mailing_list_prune_blacklisted_wizard__write_uid
 msgid "Last Updated by"
 msgstr ""
@@ -107,7 +102,7 @@ msgstr ""
 
 #. module: mass_mailing_list_prune_blacklisted
 #: model:ir.model,name:mass_mailing_list_prune_blacklisted.model_mass_mailing_list_prune_blacklisted_wizard
-msgid "Remove blacklisted contacts from mailng list"
+msgid "Remove blacklisted contacts from mailing list"
 msgstr ""
 
 #. module: mass_mailing_list_prune_blacklisted
